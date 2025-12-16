@@ -108,12 +108,13 @@
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <h1 class="text-xl font-bold text-black" id="navName">Afshara Tasneem Zoa</h1>
-                <div class="hidden md:flex space-x-6">
+                <div class="hidden md:flex space-x-4 text-sm">
                     <a href="#home" class="text-gray-700 hover:text-black font-medium transition-colors">Home</a>
                     <a href="#research" class="text-gray-700 hover:text-black font-medium transition-colors">Research</a>
                     <a href="#skills" class="text-gray-700 hover:text-black font-medium transition-colors">Skills</a>
                     <a href="#projects" class="text-gray-700 hover:text-black font-medium transition-colors">Projects</a>
                     <a href="#education" class="text-gray-700 hover:text-black font-medium transition-colors">Education</a>
+                    <a href="#activities" class="text-gray-700 hover:text-black font-medium transition-colors">Activities</a>
                     <a href="#contact" class="text-gray-700 hover:text-black font-medium transition-colors">Contact</a>
                 </div>
                 <!-- Mobile Menu Button -->
@@ -128,6 +129,8 @@
                 <a href="#skills" class="block text-gray-700 hover:text-black font-medium transition-colors">Skills</a>
                 <a href="#projects" class="block text-gray-700 hover:text-black font-medium transition-colors">Projects</a>
                 <a href="#education" class="block text-gray-700 hover:text-black font-medium transition-colors">Education</a>
+                <a href="#coursework" class="block text-gray-700 hover:text-black font-medium transition-colors">Coursework</a>
+                <a href="#activities" class="block text-gray-700 hover:text-black font-medium transition-colors">Activities</a>
                 <a href="#contact" class="block text-gray-700 hover:text-black font-medium transition-colors">Contact</a>
             </div>
         </div>
@@ -153,12 +156,19 @@
                 CSE Undergraduate @ BRAC University | Aspiring Researcher & Tech Enthusiast
             </p>
             
-            <!-- CTA Button -->
-            <a href="#research" 
-               class="inline-flex items-center gap-2 bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-                <i class="fas fa-rocket"></i>
-                View My Work
-            </a>
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="#research" 
+                   class="inline-flex items-center gap-2 bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-rocket"></i>
+                    View My Work
+                </a>
+                <a href="#" id="downloadCV"
+                   class="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-black border-2 border-black px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-download"></i>
+                    Download CV
+                </a>
+            </div>
         </div>
     </section>
 
@@ -294,6 +304,48 @@
                 <div id="achievementsGrid" class="grid md:grid-cols-2 gap-6">
                     <!-- Achievements will be dynamically inserted here -->
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Coursework Section -->
+    <section id="coursework" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
+                <i class="fas fa-book mr-3"></i>Academic Coursework
+            </h2>
+            <p class="text-center text-gray-600 mb-12">Completed and ongoing computer science courses</p>
+            
+            <div id="courseworkGrid" class="grid md:grid-cols-3 gap-6">
+                <!-- Coursework will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Training Section -->
+    <section id="certifications" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
+                <i class="fas fa-certificate mr-3"></i>Certifications & Training
+            </h2>
+            <p class="text-center text-gray-600 mb-12">Professional development and continuous learning</p>
+            
+            <div id="certificationsGrid" class="grid md:grid-cols-2 gap-6">
+                <!-- Certifications will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Extracurricular Activities Section -->
+    <section id="activities" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
+                <i class="fas fa-users mr-3"></i>Extracurricular Activities
+            </h2>
+            <p class="text-center text-gray-600 mb-12">Leadership, clubs, and community involvement</p>
+            
+            <div id="activitiesGrid" class="grid md:grid-cols-2 gap-6">
+                <!-- Activities will be dynamically inserted here -->
             </div>
         </div>
     </section>
@@ -496,6 +548,117 @@
                 }
             ],
             
+            // Academic Coursework
+            coursework: [
+                {
+                    category: "Programming Fundamentals",
+                    courses: ["Introduction to Programming (C)", "Object-Oriented Programming (Python)", "Data Structures & Algorithms"],
+                    icon: "fas fa-code",
+                    status: "Completed"
+                },
+                {
+                    category: "Mathematics & Theory",
+                    courses: ["Discrete Mathematics", "Linear Algebra", "Calculus", "Probability & Statistics"],
+                    icon: "fas fa-square-root-alt",
+                    status: "In Progress"
+                },
+                {
+                    category: "Computer Science Core",
+                    courses: ["Computer Fundamentals", "Digital Logic Design", "Computer Organization"],
+                    icon: "fas fa-microchip",
+                    status: "Completed"
+                },
+                {
+                    category: "Web & Software Development",
+                    courses: ["Web Technologies", "Database Management Systems", "Software Engineering"],
+                    icon: "fas fa-laptop-code",
+                    status: "Upcoming"
+                },
+                {
+                    category: "Emerging Technologies",
+                    courses: ["Artificial Intelligence", "Machine Learning", "Data Science Fundamentals"],
+                    icon: "fas fa-robot",
+                    status: "Planned"
+                },
+                {
+                    category: "General Education",
+                    courses: ["English Composition", "Ethics in Technology", "Business Communication"],
+                    icon: "fas fa-book-open",
+                    status: "Completed"
+                }
+            ],
+            
+            // Certifications & Training
+            certifications: [
+                {
+                    title: "Python Programming",
+                    provider: "Online Learning Platform",
+                    date: "2024",
+                    description: "Comprehensive Python programming course covering fundamentals, OOP, and data structures.",
+                    status: "Completed",
+                    icon: "fab fa-python"
+                },
+                {
+                    title: "Introduction to Data Science",
+                    provider: "Coursera / edX",
+                    date: "In Progress",
+                    description: "Learning data analysis, visualization, and statistical methods for extracting insights from data.",
+                    status: "In Progress",
+                    icon: "fas fa-chart-bar"
+                },
+                {
+                    title: "Web Development Fundamentals",
+                    provider: "FreeCodeCamp / Udemy",
+                    date: "2024",
+                    description: "HTML5, CSS3, and JavaScript fundamentals for building responsive web applications.",
+                    status: "Completed",
+                    icon: "fas fa-globe"
+                },
+                {
+                    title: "Git & GitHub",
+                    provider: "Self-Study",
+                    date: "2024",
+                    description: "Version control systems, collaborative development, and open source contribution practices.",
+                    status: "Completed",
+                    icon: "fab fa-github"
+                }
+            ],
+            
+            // Extracurricular Activities
+            activities: [
+                {
+                    title: "BRAC University Computer Club",
+                    role: "Member",
+                    period: "2024 - Present",
+                    description: "Participating in coding workshops, hackathons, and tech talks. Collaborating with peers on programming challenges and project development.",
+                    icon: "fas fa-users"
+                },
+                {
+                    title: "Research Collaboration Initiative",
+                    role: "Co-Researcher",
+                    period: "2024 - 2025",
+                    description: "Collaborating on interdisciplinary research projects combining technology and business perspectives for social impact.",
+                    icon: "fas fa-flask"
+                },
+                {
+                    title: "Women in Tech Community",
+                    role: "Active Participant",
+                    period: "2024 - Present",
+                    description: "Engaging with women in technology communities, attending workshops, and participating in mentorship programs.",
+                    icon: "fas fa-female"
+                },
+                {
+                    title: "Volunteer Teaching",
+                    role: "Programming Tutor",
+                    period: "2024 - Present",
+                    description: "Helping junior students and peers understand programming concepts and solve coding problems.",
+                    icon: "fas fa-chalkboard-teacher"
+                }
+            ],
+            
+            // CV/Resume Link
+            cvLink: "#", // Replace with actual CV file link (e.g., "cv/Afshara_CV.pdf")
+            
             // Future Goals
             goals: [
                 {
@@ -692,6 +855,85 @@
                     <p class="text-gray-700 leading-relaxed">${goal.description}</p>
                 </div>
             `).join('');
+            
+            // Coursework Section
+            const courseworkGrid = document.getElementById('courseworkGrid');
+            courseworkGrid.innerHTML = portfolioData.coursework.map(course => `
+                <div class="glass-card rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-black text-white p-3 rounded-lg">
+                            <i class="${course.icon} text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-black">${course.category}</h3>
+                            <span class="text-xs px-2 py-1 rounded-full ${
+                                course.status === 'Completed' ? 'bg-green-100 text-green-700' :
+                                course.status === 'In Progress' ? 'bg-blue-100 text-blue-700' :
+                                course.status === 'Upcoming' ? 'bg-yellow-100 text-yellow-700' :
+                                'bg-gray-100 text-gray-700'
+                            }">${course.status}</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-2">
+                        ${course.courses.map(c => `
+                            <li class="text-sm text-gray-700 flex items-start gap-2">
+                                <i class="fas fa-check text-black mt-1"></i>
+                                <span>${c}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `).join('');
+            
+            // Certifications Section
+            const certificationsGrid = document.getElementById('certificationsGrid');
+            certificationsGrid.innerHTML = portfolioData.certifications.map(cert => `
+                <div class="glass-card rounded-xl p-6">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="bg-black text-white p-3 rounded-lg">
+                            <i class="${cert.icon} text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-start justify-between mb-2">
+                                <h3 class="text-xl font-bold text-black">${cert.title}</h3>
+                                <span class="text-xs px-2 py-1 rounded-full ${
+                                    cert.status === 'Completed' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
+                                }">${cert.status}</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-1">
+                                <i class="fas fa-building mr-2"></i>${cert.provider}
+                            </p>
+                            <p class="text-sm text-gray-600 mb-3">
+                                <i class="fas fa-calendar mr-2"></i>${cert.date}
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">${cert.description}</p>
+                </div>
+            `).join('');
+            
+            // Activities Section
+            const activitiesGrid = document.getElementById('activitiesGrid');
+            activitiesGrid.innerHTML = portfolioData.activities.map(activity => `
+                <div class="glass-card rounded-xl p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-black text-white p-3 rounded-lg">
+                            <i class="${activity.icon} text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-black mb-1">${activity.title}</h3>
+                            <p class="text-sm font-semibold text-gray-700 mb-2">${activity.role}</p>
+                            <p class="text-sm text-gray-600 mb-3">
+                                <i class="fas fa-clock mr-2"></i>${activity.period}
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">${activity.description}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            // CV Download Button
+            document.getElementById('downloadCV').href = portfolioData.cvLink;
             
             // Contact Section
             document.getElementById('contactEmail').href = `mailto:${portfolioData.social.email}`;
