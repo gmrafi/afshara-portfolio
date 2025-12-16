@@ -22,47 +22,48 @@
         }
         
         body {
-            background: #000000;
+            background: #ffffff;
             background-attachment: fixed;
         }
         
-        /* Glassmorphism Effect */
+        /* Card Effect */
         .glass-card {
-            background: rgba(15, 15, 15, 0.8);
+            background: #ffffff;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(34, 197, 94, 0.2);
+            border: 2px solid #e5e7eb;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
         
         .glass-card:hover {
-            background: rgba(20, 20, 20, 0.9);
-            border-color: rgba(34, 197, 94, 0.4);
+            background: #fafafa;
+            border-color: #000000;
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
         
         /* Glowing Profile Border */
         .profile-glow {
-            box-shadow: 0 0 30px rgba(34, 197, 94, 0.6), 0 0 60px rgba(34, 197, 94, 0.3);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.15);
             animation: pulse-glow 3s ease-in-out infinite;
         }
         
         @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 30px rgba(34, 197, 94, 0.6), 0 0 60px rgba(34, 197, 94, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.8), 0 0 80px rgba(34, 197, 94, 0.4); }
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.15); }
+            50% { box-shadow: 0 0 25px rgba(0, 0, 0, 0.4), 0 0 50px rgba(0, 0, 0, 0.2); }
         }
         
         /* Featured Card Special Effect */
         .featured-card {
-            background: linear-gradient(135deg, rgba(15, 15, 15, 0.9) 0%, rgba(25, 25, 25, 0.9) 100%);
+            background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
             backdrop-filter: blur(12px);
-            border: 2px solid rgba(34, 197, 94, 0.3);
-            box-shadow: 0 10px 40px rgba(34, 197, 94, 0.2);
+            border: 3px solid #000000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
         
         .featured-card:hover {
-            border-color: rgba(34, 197, 94, 0.6);
-            box-shadow: 0 20px 60px rgba(34, 197, 94, 0.3);
+            border-color: #000000;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
         }
         
         /* Smooth Animations */
@@ -87,31 +88,33 @@
         }
         
         ::-webkit-scrollbar-track {
-            background: #000000;
+            background: #f5f5f5;
         }
         
         ::-webkit-scrollbar-thumb {
-            background: #22c55e;
+            background: #000000;
             border-radius: 5px;
         }
         
         ::-webkit-scrollbar-thumb:hover {
-            background: #16a34a;
+            background: #333333;
         }
     </style>
 </head>
-<body class="text-slate-100 antialiased">
+<body class="text-gray-900 antialiased">
 
     <!-- Navigation Header -->
-    <nav class="fixed top-0 left-0 right-0 z-50 glass-card">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-gray-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <h1 class="text-xl font-bold text-green-400" id="navName">Afshara Tasneem Zoa</h1>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="hover:text-green-400 transition-colors">Home</a>
-                    <a href="#research" class="hover:text-green-400 transition-colors">Research</a>
-                    <a href="#skills" class="hover:text-green-400 transition-colors">Skills</a>
-                    <a href="#contact" class="hover:text-green-400 transition-colors">Contact</a>
+                <h1 class="text-xl font-bold text-black" id="navName">Afshara Tasneem Zoa</h1>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-gray-700 hover:text-black font-medium transition-colors">Home</a>
+                    <a href="#research" class="text-gray-700 hover:text-black font-medium transition-colors">Research</a>
+                    <a href="#skills" class="text-gray-700 hover:text-black font-medium transition-colors">Skills</a>
+                    <a href="#projects" class="text-gray-700 hover:text-black font-medium transition-colors">Projects</a>
+                    <a href="#education" class="text-gray-700 hover:text-black font-medium transition-colors">Education</a>
+                    <a href="#contact" class="text-gray-700 hover:text-black font-medium transition-colors">Contact</a>
                 </div>
                 <!-- Mobile Menu Button -->
                 <button id="mobileMenuBtn" class="md:hidden text-2xl">
@@ -120,10 +123,12 @@
             </div>
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-3">
-                <a href="#home" class="block hover:text-green-400 transition-colors">Home</a>
-                <a href="#research" class="block hover:text-green-400 transition-colors">Research</a>
-                <a href="#skills" class="block hover:text-green-400 transition-colors">Skills</a>
-                <a href="#contact" class="block hover:text-green-400 transition-colors">Contact</a>
+                <a href="#home" class="block text-gray-700 hover:text-black font-medium transition-colors">Home</a>
+                <a href="#research" class="block text-gray-700 hover:text-black font-medium transition-colors">Research</a>
+                <a href="#skills" class="block text-gray-700 hover:text-black font-medium transition-colors">Skills</a>
+                <a href="#projects" class="block text-gray-700 hover:text-black font-medium transition-colors">Projects</a>
+                <a href="#education" class="block text-gray-700 hover:text-black font-medium transition-colors">Education</a>
+                <a href="#contact" class="block text-gray-700 hover:text-black font-medium transition-colors">Contact</a>
             </div>
         </div>
     </nav>
@@ -136,20 +141,20 @@
                 <img id="profileImage" 
                      src="https://via.placeholder.com/200" 
                      alt="Profile Photo" 
-                     class="w-48 h-48 rounded-full mx-auto border-4 border-green-500 profile-glow object-cover">
+                     class="w-48 h-48 rounded-full mx-auto border-4 border-black profile-glow object-cover">
             </div>
             
             <!-- Name & Tagline -->
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent" id="heroName">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 text-black" id="heroName">
                 Afshara Tasneem Zoa
             </h1>
-            <p class="text-lg md:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed" id="heroTagline">
+            <p class="text-lg md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed" id="heroTagline">
                 CSE Undergraduate @ BRAC University | Aspiring Researcher & Tech Enthusiast
             </p>
             
             <!-- CTA Button -->
             <a href="#research" 
-               class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+               class="inline-flex items-center gap-2 bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                 <i class="fas fa-rocket"></i>
                 View My Work
             </a>
@@ -160,10 +165,10 @@
     <section id="about" class="py-20 px-6">
         <div class="max-w-4xl mx-auto">
             <div class="glass-card rounded-2xl p-8 md:p-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-green-400">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-black">
                     <i class="fas fa-user-circle mr-3"></i>About Me
                 </h2>
-                <p class="text-slate-300 text-lg leading-relaxed" id="aboutBio">
+                <p class="text-gray-700 text-lg leading-relaxed" id="aboutBio">
                     I am a first-year Computer Science and Engineering student at BRAC University with a passion for research and technology. 
                     My interests span across software development, data analysis, and exploring innovative solutions to real-world problems.
                 </p>
@@ -174,51 +179,51 @@
     <!-- Featured Research Section -->
     <section id="research" class="py-20 px-6">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold mb-4 text-center">
-                <i class="fas fa-star text-yellow-400 mr-3"></i>Featured Research
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 text-center text-black">
+                <i class="fas fa-star text-black mr-3"></i>Featured Research
             </h2>
-            <p class="text-center text-slate-400 mb-12 text-lg">Spotlight Publication</p>
+            <p class="text-center text-gray-600 mb-12 text-lg">Conference Paper Submission</p>
             
             <!-- Featured Research Card -->
             <div class="featured-card rounded-2xl p-8 md:p-12 transition-all duration-300">
                 <!-- Label Badge -->
                 <div class="mb-6">
-                    <span class="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block" id="paperLabel">
+                    <span class="bg-black text-white px-4 py-2 rounded-full text-sm font-semibold inline-block" id="paperLabel">
                         Conference Paper / Co-authored
                     </span>
                 </div>
                 
                 <!-- Paper Title -->
-                <h3 class="text-3xl md:text-4xl font-bold mb-6 text-green-300" id="paperTitle">
-                    Impact of Mobile Financial Services on Socio-Economic Development
+                <h3 class="text-3xl md:text-4xl font-bold mb-6 text-black" id="paperTitle">
+                    bKash's AI-Driven Nano Loans: Advancing Sustainable Microfinance in Bangladesh
                 </h3>
                 
                 <!-- Abstract/Description -->
-                <p class="text-slate-300 text-lg mb-8 leading-relaxed" id="paperAbstract">
+                <p class="text-gray-700 text-lg mb-8 leading-relaxed" id="paperAbstract">
                     This research explores the transformative impact of mobile financial services (MFS) on socio-economic development in emerging economies. 
                     Through comprehensive data analysis and field studies, we examine how digital payment systems contribute to financial inclusion, 
                     economic growth, and community empowerment. Our findings provide valuable insights for policymakers and technology innovators.
                 </p>
                 
                 <!-- Metadata -->
-                <div class="flex flex-wrap gap-6 mb-8 text-slate-400">
+                <div class="flex flex-wrap gap-6 mb-8 text-gray-600">
                     <div class="flex items-center gap-2">
-                        <i class="fas fa-calendar-alt text-green-400"></i>
-                        <span id="paperYear">2024</span>
+                        <i class="fas fa-calendar-alt text-black"></i>
+                        <span id="paperYear">2025</span>
                     </div>
                     <div class="flex items-center gap-2">
-                        <i class="fas fa-building text-green-400"></i>
-                        <span id="paperVenue">International Conference on Technology</span>
+                        <i class="fas fa-building text-black"></i>
+                        <span id="paperVenue">ICCBM 2025, BRAC University</span>
                     </div>
                     <div class="flex items-center gap-2">
-                        <i class="fas fa-users text-green-400"></i>
-                        <span id="paperAuthors">A.T. Zoa et al.</span>
+                        <i class="fas fa-users text-black"></i>
+                        <span id="paperAuthors">M.G.M. Rafi & A.T. Zoa</span>
                     </div>
                 </div>
                 
                 <!-- Action Button -->
                 <a href="#" id="paperLink" target="_blank"
-                   class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg">
+                   class="inline-flex items-center gap-2 bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg">
                     <i class="fas fa-file-pdf"></i>
                     Read Paper
                 </a>
@@ -229,8 +234,8 @@
     <!-- Skills Section -->
     <section id="skills" class="py-20 px-6">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
-                <i class="fas fa-code text-green-400 mr-3"></i>Skills & Technologies
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-black">
+                <i class="fas fa-code text-black mr-3"></i>Skills & Technologies
             </h2>
             
             <div id="skillsGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -239,34 +244,73 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
+                <i class="fas fa-laptop-code text-black mr-3"></i>Academic Projects
+            </h2>
+            <p class="text-center text-gray-600 mb-12">Hands-on learning and practical applications</p>
+            
+            <div id="projectsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Projects will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Achievements Section -->
+    <section id="education" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <!-- Education -->
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-black">
+                    <i class="fas fa-graduation-cap text-black mr-3"></i>Education
+                </h2>
+                <div id="educationContent" class="space-y-6">
+                    <!-- Education items will be dynamically inserted here -->
+                </div>
+            </div>
+            
+            <!-- Achievements -->
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-black">
+                    <i class="fas fa-trophy text-black mr-3"></i>Achievements & Activities
+                </h2>
+                <div id="achievementsGrid" class="grid md:grid-cols-2 gap-6">
+                    <!-- Achievements will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact/Footer Section -->
-    <footer id="contact" class="py-16 px-6 border-t border-slate-700">
+    <footer id="contact" class="py-16 px-6 border-t-2 border-gray-200 bg-gray-50">
         <div class="max-w-5xl mx-auto">
             <!-- Social Links -->
             <div class="flex justify-center gap-8 mb-8">
                 <a href="#" id="linkedinLink" target="_blank" 
-                   class="text-3xl hover:text-green-400 transition-colors">
+                   class="text-3xl text-gray-700 hover:text-black transition-colors">
                     <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="#" id="githubLink" target="_blank" 
-                   class="text-3xl hover:text-green-400 transition-colors">
+                   class="text-3xl text-gray-700 hover:text-black transition-colors">
                     <i class="fab fa-github"></i>
                 </a>
                 <a href="mailto:contact@example.com" id="emailLink" 
-                   class="text-3xl hover:text-green-400 transition-colors">
+                   class="text-3xl text-gray-700 hover:text-black transition-colors">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
             
             <!-- Copyright -->
-            <div class="text-center text-slate-400 mb-6">
+            <div class="text-center text-gray-600 mb-4">
                 <p id="copyrightText">&copy; 2024 Afshara Tasneem Zoa. All rights reserved.</p>
             </div>
             
             <!-- Technical Signature -->
             <div class="text-center">
-                <p class="text-xs text-slate-500 font-mono">
-                    v1.0 Initialized by <a href="#" class="text-white hover:text-green-400 transition-colors">Md Golam Mubasshir Rafi</a>
+                <p class="text-xs text-gray-500 font-mono">
+                    v1.0 Initialized by <a href="#" class="text-black hover:text-gray-700 transition-colors font-semibold">Md Golam Mubasshir Rafi</a>
                 </p>
             </div>
         </div>
@@ -282,40 +326,104 @@
             // Personal Information
             name: "Afshara Tasneem Zoa",
             tagline: "CSE Undergraduate @ BRAC University | Aspiring Researcher & Tech Enthusiast",
-            profileImage: "https://via.placeholder.com/200", // Replace with your photo URL
+            profileImage: "profile.jpg", // Replace with your actual photo filename (e.g., profile.jpg, profile.png)
             
             // About Section
-            bio: "I am a first-year Computer Science and Engineering student at BRAC University with a passion for research and technology. My interests span across software development, data analysis, and exploring innovative solutions to real-world problems.",
+            bio: "I am an undergraduate student in the Department of Computer Science & Engineering at BRAC University. I am passionate about using technology for sustainability and explore AI applications in finance to tackle challenges in underserved regions. My research interests include artificial intelligence, fintech, sustainable development, and ethical technology solutions for emerging markets.",
             
             // Featured Research Paper
             research: {
                 label: "Conference Paper / Co-authored",
-                title: "Impact of Mobile Financial Services on Socio-Economic Development",
-                abstract: "This research explores the transformative impact of mobile financial services (MFS) on socio-economic development in emerging economies. Through comprehensive data analysis and field studies, we examine how digital payment systems contribute to financial inclusion, economic growth, and community empowerment. Our findings provide valuable insights for policymakers and technology innovators.",
-                year: "2024",
-                venue: "International Conference on Technology",
-                authors: "A.T. Zoa et al.",
-                link: "#" // Replace with actual paper link (e.g., ResearchGate, IEEE, etc.)
+                title: "bKash's AI-Driven Nano Loans: Advancing Sustainable Microfinance in Bangladesh",
+                abstract: "bKash's 2021 collateral-free digital nano loan in collaboration with the City Bank tackles financial exclusion in the Global South, particularly in Bangladesh. Focusing on Abantika, a rural female micro-entrepreneur, it explores AI's role in credit and the ethical governance challenge amid sustainability goals. This case study examines the intersection of fintech innovation, artificial intelligence, and sustainable finance in emerging markets.",
+                year: "2025",
+                venue: "ICCBM 2025, BRAC University",
+                authors: "M.G.M. Rafi & A.T. Zoa",
+                link: "#" // Replace with actual paper link when published
             },
             
             // Skills (Icon names from Font Awesome)
             skills: [
-                { name: "Python", icon: "fab fa-python", color: "text-green-400" },
-                { name: "C / C++", icon: "fas fa-code", color: "text-green-400" },
-                { name: "HTML/CSS", icon: "fab fa-html5", color: "text-green-400" },
-                { name: "Research", icon: "fas fa-microscope", color: "text-green-400" },
-                { name: "Data Analysis", icon: "fas fa-chart-line", color: "text-green-400" }
+                { name: "Python", icon: "fab fa-python", color: "text-black" },
+                { name: "C / C++", icon: "fas fa-code", color: "text-black" },
+                { name: "HTML/CSS", icon: "fab fa-html5", color: "text-black" },
+                { name: "AI & Research", icon: "fas fa-brain", color: "text-black" },
+                { name: "Data Analysis", icon: "fas fa-chart-line", color: "text-black" }
+            ],
+            
+            // Academic Projects
+            projects: [
+                {
+                    title: "Personal Portfolio Website",
+                    description: "A responsive personal portfolio website built with HTML, Tailwind CSS, and JavaScript to showcase academic achievements and research work.",
+                    tech: ["HTML5", "Tailwind CSS", "JavaScript"],
+                    link: "#",
+                    icon: "fas fa-globe"
+                },
+                {
+                    title: "Python Programming Projects",
+                    description: "Collection of Python programs developed during CSE coursework including data structures, algorithms, and problem-solving exercises.",
+                    tech: ["Python", "Algorithms"],
+                    link: "#",
+                    icon: "fab fa-python"
+                },
+                {
+                    title: "C Programming Fundamentals",
+                    description: "Core programming concepts implementation in C language covering variables, functions, arrays, pointers, and file handling.",
+                    tech: ["C Language", "Data Structures"],
+                    link: "#",
+                    icon: "fas fa-terminal"
+                }
+            ],
+            
+            // Education
+            education: [
+                {
+                    degree: "Bachelor of Science in Computer Science & Engineering",
+                    institution: "BRAC University",
+                    location: "Dhaka, Bangladesh",
+                    period: "2024 - Present",
+                    description: "Currently pursuing undergraduate degree with focus on artificial intelligence, software development, and research methodologies."
+                }
+            ],
+            
+            // Achievements & Activities
+            achievements: [
+                {
+                    title: "Conference Paper Submission",
+                    description: "Co-authored and submitted a case study on AI-driven microfinance to ICCBM 2025 at BRAC University.",
+                    icon: "fas fa-file-alt",
+                    year: "2025"
+                },
+                {
+                    title: "Research Collaboration",
+                    description: "Collaborated on interdisciplinary research combining computer science and business administration perspectives.",
+                    icon: "fas fa-users",
+                    year: "2024-2025"
+                },
+                {
+                    title: "Academic Excellence",
+                    description: "Maintained strong academic performance in core CSE courses including programming, mathematics, and computer fundamentals.",
+                    icon: "fas fa-award",
+                    year: "2024"
+                },
+                {
+                    title: "Tech Enthusiast",
+                    description: "Actively exploring emerging technologies including AI, machine learning, and fintech applications.",
+                    icon: "fas fa-lightbulb",
+                    year: "Ongoing"
+                }
             ],
             
             // Social Links
             social: {
                 linkedin: "https://www.linkedin.com/in/yourprofile", // Replace with your LinkedIn
                 github: "https://github.com/yourusername", // Replace with your GitHub
-                email: "your.email@example.com" // Replace with your email
+                email: "afshara.tasneem.zoa@g.bracu.ac.bd"
             },
             
             // Footer
-            copyright: "2024 Afshara Tasneem Zoa. All rights reserved."
+            copyright: "2025 Afshara Tasneem Zoa. All rights reserved."
         };
 
         // ============================================
@@ -349,7 +457,67 @@
             skillsGrid.innerHTML = portfolioData.skills.map(skill => `
                 <div class="glass-card rounded-xl p-6 flex flex-col items-center gap-4 text-center">
                     <i class="${skill.icon} text-5xl ${skill.color}"></i>
-                    <p class="font-semibold text-slate-200">${skill.name}</p>
+                    <p class="font-semibold text-gray-800">${skill.name}</p>
+                </div>
+            `).join('');
+            
+            // Projects Section
+            const projectsGrid = document.getElementById('projectsGrid');
+            projectsGrid.innerHTML = portfolioData.projects.map(project => `
+                <div class="glass-card rounded-xl p-6 hover:shadow-xl transition-all">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="${project.icon} text-3xl text-black"></i>
+                        <h3 class="text-xl font-bold text-black">${project.title}</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4 leading-relaxed">${project.description}</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        ${project.tech.map(tech => `
+                            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-xs font-medium">${tech}</span>
+                        `).join('')}
+                    </div>
+                    <a href="${project.link}" class="text-black hover:text-gray-700 font-medium inline-flex items-center gap-1 text-sm">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            `).join('');
+            
+            // Education Section
+            const educationContent = document.getElementById('educationContent');
+            educationContent.innerHTML = portfolioData.education.map(edu => `
+                <div class="glass-card rounded-xl p-8">
+                    <div class="flex items-start gap-4">
+                        <i class="fas fa-university text-4xl text-black mt-1"></i>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-black mb-2">${edu.degree}</h3>
+                            <p class="text-lg font-semibold text-gray-700 mb-1">${edu.institution}</p>
+                            <p class="text-gray-600 mb-2">
+                                <i class="fas fa-map-marker-alt mr-2"></i>${edu.location}
+                            </p>
+                            <p class="text-gray-600 mb-3">
+                                <i class="fas fa-calendar mr-2"></i>${edu.period}
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">${edu.description}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Achievements Section
+            const achievementsGrid = document.getElementById('achievementsGrid');
+            achievementsGrid.innerHTML = portfolioData.achievements.map(achievement => `
+                <div class="glass-card rounded-xl p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-black text-white p-3 rounded-lg">
+                            <i class="${achievement.icon} text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-start justify-between mb-2">
+                                <h3 class="text-xl font-bold text-black">${achievement.title}</h3>
+                                <span class="text-sm text-gray-600 font-medium">${achievement.year}</span>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">${achievement.description}</p>
+                        </div>
+                    </div>
                 </div>
             `).join('');
             
