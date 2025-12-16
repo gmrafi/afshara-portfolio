@@ -163,7 +163,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-6">
+    <section id="about" class="py-20 px-6 bg-gray-50">
         <div class="max-w-4xl mx-auto">
             <div class="glass-card rounded-2xl p-8 md:p-12">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6 text-black">
@@ -173,6 +173,20 @@
                     I am a first-year Computer Science and Engineering student at BRAC University with a passion for research and technology. 
                     My interests span across software development, data analysis, and exploring innovative solutions to real-world problems.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Interests Section -->
+    <section id="interests" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
+                <i class="fas fa-lightbulb mr-3"></i>Research Interests
+            </h2>
+            <p class="text-center text-gray-600 mb-12">Areas of academic focus and exploration</p>
+            
+            <div id="interestsGrid" class="grid md:grid-cols-2 gap-6">
+                <!-- Research interests will be dynamically inserted here -->
             </div>
         </div>
     </section>
@@ -284,28 +298,98 @@
         </div>
     </section>
 
-    <!-- Contact/Footer Section -->
-    <footer id="contact" class="py-16 px-6 border-t-2 border-gray-200 bg-gray-50">
+    <!-- Future Goals Section -->
+    <section id="goals" class="py-20 px-6 bg-gray-50">
         <div class="max-w-5xl mx-auto">
-            <!-- Social Links -->
-            <div class="flex justify-center gap-8 mb-8">
-                <a href="#" id="linkedinLink" target="_blank" 
-                   class="text-3xl text-gray-700 hover:text-black transition-colors">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="#" id="githubLink" target="_blank" 
-                   class="text-3xl text-gray-700 hover:text-black transition-colors">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:contact@example.com" id="emailLink" 
-                   class="text-3xl text-gray-700 hover:text-black transition-colors">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
+                <i class="fas fa-rocket mr-3"></i>Future Goals
+            </h2>
+            <p class="text-center text-gray-600 mb-12">Vision for academic and professional growth</p>
             
+            <div id="goalsGrid" class="grid md:grid-cols-2 gap-6">
+                <!-- Future goals will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
+                <i class="fas fa-envelope mr-3"></i>Get In Touch
+            </h2>
+            <p class="text-center text-gray-600 mb-12">Feel free to reach out for collaborations or discussions</p>
+            
+            <div class="glass-card rounded-2xl p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-black mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-envelope text-2xl text-black mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Email</p>
+                                    <a href="mailto:afshara.tasneem.zoa@g.bracu.ac.bd" 
+                                       class="text-gray-700 hover:text-black transition-colors" id="contactEmail">
+                                        afshara.tasneem.zoa@g.bracu.ac.bd
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-university text-2xl text-black mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Institution</p>
+                                    <p class="text-gray-700">BRAC University, Dhaka, Bangladesh</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-id-badge text-2xl text-black mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">ORCID ID</p>
+                                    <a href="https://orcid.org/0009-0004-9322-8465" 
+                                       target="_blank"
+                                       class="text-gray-700 hover:text-black transition-colors">
+                                        0009-0004-9322-8465
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-black mb-6">Connect With Me</h3>
+                        <div class="space-y-4">
+                            <a href="#" id="contactLinkedIn" target="_blank" 
+                               class="flex items-center gap-3 p-4 border-2 border-gray-200 rounded-lg hover:border-black transition-all hover:shadow-md">
+                                <i class="fab fa-linkedin text-3xl text-black"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">LinkedIn</p>
+                                    <p class="text-sm text-gray-600">Professional Network</p>
+                                </div>
+                            </a>
+                            <a href="#" id="contactGitHub" target="_blank" 
+                               class="flex items-center gap-3 p-4 border-2 border-gray-200 rounded-lg hover:border-black transition-all hover:shadow-md">
+                                <i class="fab fa-github text-3xl text-black"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">GitHub</p>
+                                    <p class="text-sm text-gray-600">Code Repository</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="py-12 px-6 border-t-2 border-gray-200 bg-gray-50">
+        <div class="max-w-5xl mx-auto">
             <!-- Copyright -->
             <div class="text-center text-gray-600 mb-4">
-                <p id="copyrightText">&copy; 2024 Afshara Tasneem Zoa. All rights reserved.</p>
+                <p id="copyrightText">&copy; 2025 Afshara Tasneem Zoa. All rights reserved.</p>
             </div>
             
             <!-- Technical Signature -->
@@ -327,7 +411,7 @@
             // Personal Information
             name: "Afshara Tasneem Zoa",
             tagline: "CSE Undergraduate @ BRAC University | Aspiring Researcher & Tech Enthusiast",
-            profileImage: "profile.jpg", // Replace with your actual photo filename (e.g., profile.jpg, profile.png)
+            profileImage: "photos/profile.jpg", // Your profile photo path
             
             // About Section
             bio: "I am an undergraduate student in the Department of Computer Science & Engineering at BRAC University. I am passionate about using technology for sustainability and explore AI applications in finance to tackle challenges in underserved regions. My research interests include artificial intelligence, fintech, sustainable development, and ethical technology solutions for emerging markets.",
@@ -385,6 +469,58 @@
                     location: "Dhaka, Bangladesh",
                     period: "2024 - Present",
                     description: "Currently pursuing undergraduate degree with focus on artificial intelligence, software development, and research methodologies."
+                }
+            ],
+            
+            // Research Interests
+            interests: [
+                {
+                    title: "Artificial Intelligence & Machine Learning",
+                    description: "Exploring AI applications in finance, sustainability, and social impact. Interested in ethical AI development and responsible technology deployment.",
+                    icon: "fas fa-brain"
+                },
+                {
+                    title: "Fintech & Digital Innovation",
+                    description: "Studying mobile financial services, digital payments, and blockchain technologies to address financial inclusion in emerging markets.",
+                    icon: "fas fa-coins"
+                },
+                {
+                    title: "Sustainable Development & Tech for Good",
+                    description: "Investigating how technology can drive socio-economic development, particularly in underserved regions and rural communities.",
+                    icon: "fas fa-leaf"
+                },
+                {
+                    title: "Data Science & Analytics",
+                    description: "Learning data analysis techniques, statistical modeling, and visualization to extract meaningful insights from complex datasets.",
+                    icon: "fas fa-database"
+                }
+            ],
+            
+            // Future Goals
+            goals: [
+                {
+                    title: "Graduate Studies",
+                    description: "Pursue advanced studies in Computer Science with specialization in AI or Data Science at a leading international university.",
+                    icon: "fas fa-graduation-cap",
+                    timeline: "2028+"
+                },
+                {
+                    title: "Research Publications",
+                    description: "Contribute to academic research by publishing papers in reputable conferences and journals, focusing on AI applications in emerging markets.",
+                    icon: "fas fa-file-alt",
+                    timeline: "Ongoing"
+                },
+                {
+                    title: "Tech Industry Experience",
+                    description: "Gain practical experience through internships at leading tech companies or innovative startups in fintech or AI sectors.",
+                    icon: "fas fa-briefcase",
+                    timeline: "2026-2027"
+                },
+                {
+                    title: "Social Impact Projects",
+                    description: "Develop and contribute to technology solutions that address real-world challenges in education, healthcare, and financial inclusion.",
+                    icon: "fas fa-hands-helping",
+                    timeline: "Continuous"
                 }
             ],
             
@@ -522,10 +658,46 @@
                 </div>
             `).join('');
             
-            // Social Links
-            document.getElementById('linkedinLink').href = portfolioData.social.linkedin;
-            document.getElementById('githubLink').href = portfolioData.social.github;
-            document.getElementById('emailLink').href = `mailto:${portfolioData.social.email}`;
+            // Research Interests Section
+            const interestsGrid = document.getElementById('interestsGrid');
+            interestsGrid.innerHTML = portfolioData.interests.map(interest => `
+                <div class="glass-card rounded-xl p-6 hover:shadow-xl transition-all">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-black text-white p-4 rounded-lg">
+                            <i class="${interest.icon} text-3xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-black mb-3">${interest.title}</h3>
+                            <p class="text-gray-700 leading-relaxed">${interest.description}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Future Goals Section
+            const goalsGrid = document.getElementById('goalsGrid');
+            goalsGrid.innerHTML = portfolioData.goals.map(goal => `
+                <div class="glass-card rounded-xl p-6 hover:shadow-xl transition-all">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="bg-black text-white p-3 rounded-lg">
+                            <i class="${goal.icon} text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-start justify-between mb-2">
+                                <h3 class="text-xl font-bold text-black">${goal.title}</h3>
+                                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full font-medium">${goal.timeline}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">${goal.description}</p>
+                </div>
+            `).join('');
+            
+            // Contact Section
+            document.getElementById('contactEmail').href = `mailto:${portfolioData.social.email}`;
+            document.getElementById('contactEmail').textContent = portfolioData.social.email;
+            document.getElementById('contactLinkedIn').href = portfolioData.social.linkedin;
+            document.getElementById('contactGitHub').href = portfolioData.social.github;
             
             // Footer
             document.getElementById('copyrightText').innerHTML = `&copy; ${portfolioData.copyright}`;
