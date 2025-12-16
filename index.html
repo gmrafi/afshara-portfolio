@@ -2,7 +2,9 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Afshara Tasneem Zoa - Computer Science & Engineering student at BRAC University. Research in AI, Fintech, and Sustainable Development.">
+    <meta name="theme-color" content="#000000">
     <title>Afshara Tasneem Zoa | CSE Student & Researcher</title>
     
     <!-- Tailwind CSS CDN -->
@@ -99,6 +101,48 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #333333;
         }
+        
+        /* Mobile Touch Optimization */
+        @media (max-width: 768px) {
+            /* Larger touch targets for mobile */
+            button, a {
+                min-height: 44px;
+            }
+            
+            /* Prevent text size adjustment on mobile */
+            body {
+                -webkit-text-size-adjust: 100%;
+                text-size-adjust: 100%;
+            }
+            
+            /* Reduce animation on mobile for performance */
+            .fade-in {
+                animation: none;
+            }
+            
+            /* Better spacing for mobile cards */
+            .glass-card {
+                margin-bottom: 0;
+            }
+        }
+        
+        /* Tablet Optimization */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            /* Optimal spacing for tablets */
+            .max-w-5xl, .max-w-6xl {
+                padding: 0 2rem;
+            }
+        }
+        
+        /* Smooth scrolling for all devices */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Prevent horizontal scroll */
+        body {
+            overflow-x: hidden;
+        }
     </style>
 </head>
 <body class="text-gray-900 antialiased">
@@ -137,34 +181,34 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-24 pb-20">
+    <section id="home" class="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-24 pb-20">
         <div class="max-w-5xl mx-auto text-center fade-in">
             <!-- Profile Image -->
-            <div class="mb-8">
+            <div class="mb-6 sm:mb-8">
                 <img id="profileImage" 
                      src="profile.jpg" 
                      alt="Profile Photo" 
                      onerror="this.src='https://via.placeholder.com/200/000000/FFFFFF?text=A.T.Z'"
-                     class="w-48 h-48 rounded-full mx-auto border-4 border-black profile-glow object-cover">
+                     class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mx-auto border-4 border-black profile-glow object-cover">
             </div>
             
             <!-- Name & Tagline -->
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 text-black" id="heroName">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-3 sm:mb-4 text-black" id="heroName">
                 Afshara Tasneem Zoa
             </h1>
-            <p class="text-lg md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed" id="heroTagline">
+            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed px-4" id="heroTagline">
                 CSE Undergraduate @ BRAC University | Aspiring Researcher & Tech Enthusiast
             </p>
             
             <!-- CTA Buttons -->
-            <div class="flex flex-wrap items-center justify-center gap-4">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
                 <a href="#research" 
-                   class="inline-flex items-center gap-2 bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                   class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black hover:bg-gray-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                     <i class="fas fa-rocket"></i>
                     View My Work
                 </a>
                 <a href="#" id="downloadCV"
-                   class="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-black border-2 border-black px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                   class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-black border-2 border-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                     <i class="fas fa-download"></i>
                     Download CV
                 </a>
@@ -173,7 +217,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-6 bg-gray-50">
+    <section id="about" class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-50">
         <div class="max-w-4xl mx-auto">
             <div class="glass-card rounded-2xl p-8 md:p-12">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6 text-black">
@@ -188,9 +232,9 @@
     </section>
 
     <!-- Research Interests Section -->
-    <section id="interests" class="py-20 px-6">
+    <section id="interests" class="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-center text-black">
                 <i class="fas fa-lightbulb mr-3"></i>Research Interests
             </h2>
             <p class="text-center text-gray-600 mb-12">Areas of academic focus and exploration</p>
@@ -202,15 +246,15 @@
     </section>
 
     <!-- Featured Research Section -->
-    <section id="research" class="py-20 px-6">
+    <section id="research" class="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold mb-4 text-center text-black">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-center text-black">
                 <i class="fas fa-star text-black mr-3"></i>Featured Research
             </h2>
             <p class="text-center text-gray-600 mb-12 text-lg">Conference Paper Submission</p>
             
             <!-- Featured Research Card -->
-            <div class="featured-card rounded-2xl p-8 md:p-12 transition-all duration-300">
+            <div class="featured-card rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 transition-all duration-300">
                 <!-- Label Badge -->
                 <div class="mb-6">
                     <span class="bg-black text-white px-4 py-2 rounded-full text-sm font-semibold inline-block" id="paperLabel">
@@ -219,7 +263,7 @@
                 </div>
                 
                 <!-- Paper Title -->
-                <h3 class="text-3xl md:text-4xl font-bold mb-6 text-black" id="paperTitle">
+                <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-black" id="paperTitle">
                     bKash's AI-Driven Nano Loans: Advancing Sustainable Microfinance in Bangladesh
                 </h3>
                 
@@ -257,7 +301,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 px-6">
+    <section id="skills" class="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-black">
                 <i class="fas fa-code text-black mr-3"></i>Skills & Technologies
@@ -270,7 +314,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-6 bg-gray-50">
+    <section id="projects" class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
                 <i class="fas fa-laptop-code text-black mr-3"></i>Academic Projects
@@ -284,7 +328,7 @@
     </section>
 
     <!-- Education & Achievements Section -->
-    <section id="education" class="py-20 px-6">
+    <section id="education" class="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div class="max-w-5xl mx-auto">
             <!-- Education -->
             <div class="mb-16">
@@ -309,7 +353,7 @@
     </section>
 
     <!-- Academic Coursework Section -->
-    <section id="coursework" class="py-20 px-6 bg-gray-50">
+    <section id="coursework" class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
                 <i class="fas fa-book mr-3"></i>Academic Coursework
@@ -323,7 +367,7 @@
     </section>
 
     <!-- Certifications & Training Section -->
-    <section id="certifications" class="py-20 px-6">
+    <section id="certifications" class="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
                 <i class="fas fa-certificate mr-3"></i>Certifications & Training
@@ -337,7 +381,7 @@
     </section>
 
     <!-- Extracurricular Activities Section -->
-    <section id="activities" class="py-20 px-6 bg-gray-50">
+    <section id="activities" class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-50">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
                 <i class="fas fa-users mr-3"></i>Extracurricular Activities
@@ -351,7 +395,7 @@
     </section>
 
     <!-- Future Goals Section -->
-    <section id="goals" class="py-20 px-6 bg-gray-50">
+    <section id="goals" class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-50">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
                 <i class="fas fa-rocket mr-3"></i>Future Goals
@@ -365,7 +409,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6">
+    <section id="contact" class="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
                 <i class="fas fa-envelope mr-3"></i>Get In Touch
@@ -373,7 +417,7 @@
             <p class="text-center text-gray-600 mb-12">Feel free to reach out for collaborations or discussions</p>
             
             <div class="glass-card rounded-2xl p-8 md:p-12">
-                <div class="grid md:grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                     <!-- Contact Info -->
                     <div>
                         <h3 class="text-2xl font-bold text-black mb-6">Contact Information</h3>
