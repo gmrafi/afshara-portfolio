@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afshara Tasneem Zoa | CSE Student & Researcher</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background: #000000;
+            background-attachment: fixed;
+        }
+        
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(15, 15, 15, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            background: rgba(20, 20, 20, 0.9);
+            border-color: rgba(34, 197, 94, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.15);
+        }
+        
+        /* Glowing Profile Border */
+        .profile-glow {
+            box-shadow: 0 0 30px rgba(34, 197, 94, 0.6), 0 0 60px rgba(34, 197, 94, 0.3);
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 30px rgba(34, 197, 94, 0.6), 0 0 60px rgba(34, 197, 94, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.8), 0 0 80px rgba(34, 197, 94, 0.4); }
+        }
+        
+        /* Featured Card Special Effect */
+        .featured-card {
+            background: linear-gradient(135deg, rgba(15, 15, 15, 0.9) 0%, rgba(25, 25, 25, 0.9) 100%);
+            backdrop-filter: blur(12px);
+            border: 2px solid rgba(34, 197, 94, 0.3);
+            box-shadow: 0 10px 40px rgba(34, 197, 94, 0.2);
+        }
+        
+        .featured-card:hover {
+            border-color: rgba(34, 197, 94, 0.6);
+            box-shadow: 0 20px 60px rgba(34, 197, 94, 0.3);
+        }
+        
+        /* Smooth Animations */
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #22c55e;
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #16a34a;
+        }
+    </style>
+</head>
+<body class="text-slate-100 antialiased">
+
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <h1 class="text-xl font-bold text-green-400" id="navName">Afshara Tasneem Zoa</h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-green-400 transition-colors">Home</a>
+                    <a href="#research" class="hover:text-green-400 transition-colors">Research</a>
+                    <a href="#skills" class="hover:text-green-400 transition-colors">Skills</a>
+                    <a href="#contact" class="hover:text-green-400 transition-colors">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-3">
+                <a href="#home" class="block hover:text-green-400 transition-colors">Home</a>
+                <a href="#research" class="block hover:text-green-400 transition-colors">Research</a>
+                <a href="#skills" class="block hover:text-green-400 transition-colors">Skills</a>
+                <a href="#contact" class="block hover:text-green-400 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-24 pb-20">
+        <div class="max-w-5xl mx-auto text-center fade-in">
+            <!-- Profile Image -->
+            <div class="mb-8">
+                <img id="profileImage" 
+                     src="https://via.placeholder.com/200" 
+                     alt="Profile Photo" 
+                     class="w-48 h-48 rounded-full mx-auto border-4 border-green-500 profile-glow object-cover">
+            </div>
+            
+            <!-- Name & Tagline -->
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent" id="heroName">
+                Afshara Tasneem Zoa
+            </h1>
+            <p class="text-lg md:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed" id="heroTagline">
+                CSE Undergraduate @ BRAC University | Aspiring Researcher & Tech Enthusiast
+            </p>
+            
+            <!-- CTA Button -->
+            <a href="#research" 
+               class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <i class="fas fa-rocket"></i>
+                View My Work
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass-card rounded-2xl p-8 md:p-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-green-400">
+                    <i class="fas fa-user-circle mr-3"></i>About Me
+                </h2>
+                <p class="text-slate-300 text-lg leading-relaxed" id="aboutBio">
+                    I am a first-year Computer Science and Engineering student at BRAC University with a passion for research and technology. 
+                    My interests span across software development, data analysis, and exploring innovative solutions to real-world problems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Research Section -->
+    <section id="research" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 text-center">
+                <i class="fas fa-star text-yellow-400 mr-3"></i>Featured Research
+            </h2>
+            <p class="text-center text-slate-400 mb-12 text-lg">Spotlight Publication</p>
+            
+            <!-- Featured Research Card -->
+            <div class="featured-card rounded-2xl p-8 md:p-12 transition-all duration-300">
+                <!-- Label Badge -->
+                <div class="mb-6">
+                    <span class="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block" id="paperLabel">
+                        Conference Paper / Co-authored
+                    </span>
+                </div>
+                
+                <!-- Paper Title -->
+                <h3 class="text-3xl md:text-4xl font-bold mb-6 text-green-300" id="paperTitle">
+                    Impact of Mobile Financial Services on Socio-Economic Development
+                </h3>
+                
+                <!-- Abstract/Description -->
+                <p class="text-slate-300 text-lg mb-8 leading-relaxed" id="paperAbstract">
+                    This research explores the transformative impact of mobile financial services (MFS) on socio-economic development in emerging economies. 
+                    Through comprehensive data analysis and field studies, we examine how digital payment systems contribute to financial inclusion, 
+                    economic growth, and community empowerment. Our findings provide valuable insights for policymakers and technology innovators.
+                </p>
+                
+                <!-- Metadata -->
+                <div class="flex flex-wrap gap-6 mb-8 text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-calendar-alt text-green-400"></i>
+                        <span id="paperYear">2024</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-building text-green-400"></i>
+                        <span id="paperVenue">International Conference on Technology</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-users text-green-400"></i>
+                        <span id="paperAuthors">A.T. Zoa et al.</span>
+                    </div>
+                </div>
+                
+                <!-- Action Button -->
+                <a href="#" id="paperLink" target="_blank"
+                   class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg">
+                    <i class="fas fa-file-pdf"></i>
+                    Read Paper
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+                <i class="fas fa-code text-green-400 mr-3"></i>Skills & Technologies
+            </h2>
+            
+            <div id="skillsGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Skills will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Footer Section -->
+    <footer id="contact" class="py-16 px-6 border-t border-slate-700">
+        <div class="max-w-5xl mx-auto">
+            <!-- Social Links -->
+            <div class="flex justify-center gap-8 mb-8">
+                <a href="#" id="linkedinLink" target="_blank" 
+                   class="text-3xl hover:text-green-400 transition-colors">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" id="githubLink" target="_blank" 
+                   class="text-3xl hover:text-green-400 transition-colors">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:contact@example.com" id="emailLink" 
+                   class="text-3xl hover:text-green-400 transition-colors">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="text-center text-slate-400 mb-6">
+                <p id="copyrightText">&copy; 2024 Afshara Tasneem Zoa. All rights reserved.</p>
+            </div>
+            
+            <!-- Technical Signature -->
+            <div class="text-center">
+                <p class="text-xs text-slate-500 font-mono">
+                    v1.0 Initialized by <a href="#" class="text-white hover:text-green-400 transition-colors">Md Golam Mubasshir Rafi</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ============================================
+        // PORTFOLIO DATA OBJECT
+        // Edit this section to update your portfolio content
+        // ============================================
+        const portfolioData = {
+            // Personal Information
+            name: "Afshara Tasneem Zoa",
+            tagline: "CSE Undergraduate @ BRAC University | Aspiring Researcher & Tech Enthusiast",
+            profileImage: "https://via.placeholder.com/200", // Replace with your photo URL
+            
+            // About Section
+            bio: "I am a first-year Computer Science and Engineering student at BRAC University with a passion for research and technology. My interests span across software development, data analysis, and exploring innovative solutions to real-world problems.",
+            
+            // Featured Research Paper
+            research: {
+                label: "Conference Paper / Co-authored",
+                title: "Impact of Mobile Financial Services on Socio-Economic Development",
+                abstract: "This research explores the transformative impact of mobile financial services (MFS) on socio-economic development in emerging economies. Through comprehensive data analysis and field studies, we examine how digital payment systems contribute to financial inclusion, economic growth, and community empowerment. Our findings provide valuable insights for policymakers and technology innovators.",
+                year: "2024",
+                venue: "International Conference on Technology",
+                authors: "A.T. Zoa et al.",
+                link: "#" // Replace with actual paper link (e.g., ResearchGate, IEEE, etc.)
+            },
+            
+            // Skills (Icon names from Font Awesome)
+            skills: [
+                { name: "Python", icon: "fab fa-python", color: "text-green-400" },
+                { name: "C / C++", icon: "fas fa-code", color: "text-green-400" },
+                { name: "HTML/CSS", icon: "fab fa-html5", color: "text-green-400" },
+                { name: "Research", icon: "fas fa-microscope", color: "text-green-400" },
+                { name: "Data Analysis", icon: "fas fa-chart-line", color: "text-green-400" }
+            ],
+            
+            // Social Links
+            social: {
+                linkedin: "https://www.linkedin.com/in/yourprofile", // Replace with your LinkedIn
+                github: "https://github.com/yourusername", // Replace with your GitHub
+                email: "your.email@example.com" // Replace with your email
+            },
+            
+            // Footer
+            copyright: "2024 Afshara Tasneem Zoa. All rights reserved."
+        };
+
+        // ============================================
+        // RENDER FUNCTIONS (Do not modify unless needed)
+        // ============================================
+        
+        function renderPortfolio() {
+            // Navigation
+            document.getElementById('navName').textContent = portfolioData.name;
+            
+            // Hero Section
+            document.getElementById('heroName').textContent = portfolioData.name;
+            document.getElementById('heroTagline').textContent = portfolioData.tagline;
+            document.getElementById('profileImage').src = portfolioData.profileImage;
+            document.getElementById('profileImage').alt = portfolioData.name;
+            
+            // About Section
+            document.getElementById('aboutBio').textContent = portfolioData.bio;
+            
+            // Research Section
+            document.getElementById('paperLabel').textContent = portfolioData.research.label;
+            document.getElementById('paperTitle').textContent = portfolioData.research.title;
+            document.getElementById('paperAbstract').textContent = portfolioData.research.abstract;
+            document.getElementById('paperYear').textContent = portfolioData.research.year;
+            document.getElementById('paperVenue').textContent = portfolioData.research.venue;
+            document.getElementById('paperAuthors').textContent = portfolioData.research.authors;
+            document.getElementById('paperLink').href = portfolioData.research.link;
+            
+            // Skills Section
+            const skillsGrid = document.getElementById('skillsGrid');
+            skillsGrid.innerHTML = portfolioData.skills.map(skill => `
+                <div class="glass-card rounded-xl p-6 flex flex-col items-center gap-4 text-center">
+                    <i class="${skill.icon} text-5xl ${skill.color}"></i>
+                    <p class="font-semibold text-slate-200">${skill.name}</p>
+                </div>
+            `).join('');
+            
+            // Social Links
+            document.getElementById('linkedinLink').href = portfolioData.social.linkedin;
+            document.getElementById('githubLink').href = portfolioData.social.github;
+            document.getElementById('emailLink').href = `mailto:${portfolioData.social.email}`;
+            
+            // Footer
+            document.getElementById('copyrightText').innerHTML = `&copy; ${portfolioData.copyright}`;
+        }
+
+        // ============================================
+        // INTERACTIVE FEATURES
+        // ============================================
+        
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('#mobileMenu a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize Portfolio on Page Load
+        window.addEventListener('DOMContentLoaded', renderPortfolio);
+    </script>
+</body>
+</html>
